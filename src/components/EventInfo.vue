@@ -258,7 +258,7 @@ export default {
             country: "NG",
             payment_options: "card",
             redirect_url: // specified redirect URL
-                "/",
+                "https://final-concert-ticket.herokuapp.com",
             meta: {
                 consumer_id: 23,
                 consumer_mac: "92a3-912ba-1192a",
