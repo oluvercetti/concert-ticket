@@ -57,7 +57,7 @@
             <div class="cartModal__left">
                 <button class="cartModal__left__close__btn" @click="showModal(false)"> 
                     <span class="cartModal__left__close__btn__icon">
-                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg class="cartModal__left__close__btn__icon__svg" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M13.5 4.5L4.5 13.5" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             <path d="M4.5 4.5L13.5 13.5" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
@@ -96,7 +96,7 @@
                                 </svg>
                             </button>
                             <div class="cartModal__left__event__ticket__info__button__count">{{ticketDetail.ticketCount}}</div>
-                            <button class="cartModal__left__event__ticket__info__button__operator" @click="ticketDetail.ticketCount++">
+                            <button :disabled="ticketDetail.ticketCount >= ticketDetail.qty_available" class="cartModal__left__event__ticket__info__button__operator"  @click="ticketDetail.ticketCount++">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g filter="url(#filter0_d)">
                                 <circle cx="13" cy="11" r="10" fill="white"/>
@@ -309,6 +309,7 @@ export default {
             @media screen and (min-width: 800px) {
             display: flex;
             flex-direction: row;
+            text-align: left;
             }
         }
             &__top__left{
@@ -360,6 +361,7 @@ export default {
             @media screen and (min-width: 800px) {
             width: calc(50% - 27px);
             min-height: 340px;
+            text-align: left;
             }
             }
             &__top__right__image{
@@ -374,6 +376,7 @@ export default {
         width: 40%;
             @media screen and (min-width: 800px) {
             margin: 35px 0;
+            width: 100%;
             }
         }
         &__bottom{
@@ -382,6 +385,7 @@ export default {
         margin-top: 20px;
         @media screen and (min-width: 800px) {
         display: flex;
+        text-align: left;
         }
         }
             &__bottom__left{
@@ -414,8 +418,9 @@ export default {
             &__bottom__right{
             margin-top: 20px;
             @media screen and (min-width: 800px) {
-            width: calc(50% - 27px);
-            margin-left: 27px;
+            width: calc(50% - 13px);
+            margin-top: 0;
+            margin-left: 13px;
             }
             }
                 &__bottom__right__datetitle{
@@ -423,10 +428,15 @@ export default {
                 margin-bottom: 20px;
                 }
                 &__bottom__right__datetime{
-                font-size: 24px;
-                line-height: 32px;
-                margin-bottom: 10px;
+                font-size: 14px;
+                line-height: 20px;
+                margin-bottom: 5px;
                 font-weight: bold;
+                    @media screen and (min-width: 800px) {
+                    font-size: 24px;
+                    line-height: 32px;
+                    margin-bottom: 10px;
+                    }
                 }
                 &__bottom__right__socialtitle{
                 text-transform: uppercase;
@@ -462,6 +472,7 @@ export default {
         border: none;
         display: flex;
         padding: 8px;
+        align-items: center;
          @media screen and (min-width: 768px){ 
           margin-top: 50px;
           padding: 13px;
@@ -469,6 +480,9 @@ export default {
         }
         &__close__btn__icon{
         display: block;
+         &__svg{
+         display: block;
+         }
         }
         &__event__name{
         margin-top: 11px;

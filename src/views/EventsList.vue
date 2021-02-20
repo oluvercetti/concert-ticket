@@ -41,11 +41,15 @@ background-color: #f2f2f2;
     display: block;
     text-align: center;
     @media screen and (min-width: 768px) {
-    padding: 65px 135px;
+    padding: 65px 100px;
     text-align: left;
     }
     &-text {
     font-size: 14px;
+    @media screen and (min-width: 768px) {
+    font-size: 36px;
+    padding-left: 33px;
+    }
     }
   }
 }

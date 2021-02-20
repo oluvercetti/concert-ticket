@@ -51,10 +51,11 @@
   border-radius: 4.06693px;
   box-shadow: 0 7px 3px -5px #777;
   border: none;
+  font-weight: bold;
   text-transform: uppercase;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   outline: none;
-    @media screen and (min-width: 8000px) {
+    @media screen and (min-width: 800px) {
     min-height: 30px;
     min-width: 250px;
     font-size: 12.2px;

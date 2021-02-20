@@ -9,7 +9,7 @@
       </div>
       <div class="navbar-right">
       <h5><a href="#" class="navbar-right-link">{{ ticketmsg }}</a></h5>
-      <button class="button">{{navbarbutton}}</button>
+      <button class="navbar-right__button button">{{navbarbutton}}</button>
       </div>
     </div>
 </template>
@@ -42,12 +42,15 @@ export default {
   &-logo{
 
   }
-  &-right{
+      &-right{
 
-    @media screen and (min-width: 800px) {
-    display: flex;
-    align-items: center;
-    }
+        @media screen and (min-width: 800px) {
+        display: flex;
+        align-items: center;
+        }
+      &__button{
+      padding: 13px 16px 8.6px 22px
+      }
   &-link{
     
       @media screen and (min-width: 800px) {
