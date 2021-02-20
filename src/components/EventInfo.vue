@@ -258,7 +258,7 @@ export default {
             country: "NG",
             payment_options: "card",
             redirect_url: // specified redirect URL
-                "https://localhost:443",
+                "/",
             meta: {
                 consumer_id: 23,
                 consumer_mac: "92a3-912ba-1192a",
