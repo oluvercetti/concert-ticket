@@ -310,6 +310,7 @@ export default {
             display: flex;
             flex-direction: row;
             text-align: left;
+            margin-bottom: 0;
             }
         }
             &__top__left{
@@ -323,6 +324,7 @@ export default {
                 margin: 22px 0;
                 text-transform: uppercase;
                 height: 10px;
+                font-weight: bold;
                 }
                 &__top__left__name{
                 font-family: Helvetica, Arial, sans-serif;
@@ -343,14 +345,16 @@ export default {
                 &__top__left__price{
                 height: 28px;
                 margin-bottom: 20px;
+                font-weight: bold;
                 }
                 &__top__left__btn{
+                    padding: 1em 0;
                     background-color: #F5A623;
                     margin-bottom: 10px;
                     @media screen and (min-width: 800px) {
                     min-width: 70%;
                     font-size: 14px;
-                    height: 52px;
+                    
                     }
                 }
             &__top__right{
@@ -359,9 +363,7 @@ export default {
                 width: 40%;
                 text-align: center;
             @media screen and (min-width: 800px) {
-            width: calc(50% - 27px);
-            min-height: 340px;
-            text-align: left;
+            width: 50%;
             }
             }
             &__top__right__image{

@@ -16,13 +16,13 @@
     display: flex;
     width: 100%;
     justify-content: center;
-    height: auto;
+    height: 50vh;
 }
 .loading:after {
   content: " ";
   display: block;
-  width: 60px;
-  height: 60px;
+  width: 14em;
+  height:14em;
   margin: 8px;
   border-radius: 50%;
   border: 6px solid #fff;
