@@ -61,8 +61,14 @@
     font-size: 12.2px;
     }
 }
+
 button:hover{
 cursor: pointer;
+transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(1px);
 }
 
 h4{

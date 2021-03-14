@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.b7e887e86d0ca9b82b052b5c4861af32.js"
+  "/precache-manifest.ffbab16e1e0d5278b77251e0a83612c2.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "concert-ticket"});
