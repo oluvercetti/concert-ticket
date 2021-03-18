@@ -12,17 +12,22 @@
   color: #2c3e50;
   background-color: #f2f2f2; 
 }
+body {
+padding: 0;
+margin: 0;
+}
 .loading {
     display: flex;
     width: 100%;
     justify-content: center;
-    height: 50vh;
+    min-height: 50vh;
+    align-items: center;
 }
 .loading:after {
   content: " ";
   display: block;
-  width: 14em;
-  height:14em;
+  width: 7em;
+  height:7em;
   margin: 8px;
   border-radius: 50%;
   border: 6px solid #fff;
@@ -55,12 +60,15 @@
   text-transform: uppercase;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   outline: none;
+  letter-spacing: 0.04rem;
     @media screen and (min-width: 800px) {
     min-height: 30px;
     min-width: 250px;
     font-size: 12.2px;
     }
 }
+
+
 
 button:hover{
 cursor: pointer;
@@ -85,7 +93,6 @@ img{
         max-width: 100%;
         max-height: 100%;
         display: block; /* remove extra space below image */
-        border-radius: 6px;
     }
 #nav {
   padding: 30px;

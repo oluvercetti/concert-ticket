@@ -362,6 +362,7 @@ export default {
                 margin: auto;
                 width: 40%;
                 text-align: center;
+                border-radius: 6px;
             @media screen and (min-width: 800px) {
             width: 50%;
             }
@@ -370,6 +371,12 @@ export default {
             min-width: 100%;
             min-height: 100%;
             border: none;
+            box-shadow: 0 0.5rem 0.4rem -0.4rem rgba(0, 0, 0, 0.4);
+            border-radius: 6px;
+            }
+            &__top__right__image img{
+            
+        
             }
         &__line{
         border: 1px solid #CCB7B1;
@@ -377,7 +384,7 @@ export default {
         margin: auto;
         width: 40%;
             @media screen and (min-width: 800px) {
-            margin: 35px 0;
+            margin: 5px 0 30px 0;
             width: 100%;
             }
         }

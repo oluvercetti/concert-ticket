@@ -99,6 +99,15 @@ export default {
         &__item__image{
         margin-bottom: 19px;
         align-items: center;
+        box-shadow: 0 0.5rem 0.4rem -0.4rem rgba(0, 0, 0, 0.4);
+        border-radius: 6px;
+        }
+        &__item__image:hover{
+        transform: translateY(0.1rem);
+        box-shadow: 0 0.5rem 0.7rem -0.4rem rgba(0, 0, 0, 0.4);
+        }
+        &__item__image img{        
+        border-radius: 6px;
         }
         &__item__group{
         margin-bottom: 10px;

@@ -49,7 +49,12 @@ export default {
         align-items: center;
         }
       &__button{
-      padding: 13px 16px 8.6px 22px
+      padding: 10px 0;
+      letter-spacing: 0.04rem;
+      @media screen and (min-width: 800px) {
+      min-height: 30px;
+      min-width: 214px;
+        }
       }
   &-link{
     
