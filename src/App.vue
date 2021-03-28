@@ -91,8 +91,7 @@ color: #333333;
 
 img{
         max-width: 100%;
-        max-height: 100%;
-        display: block; /* remove extra space below image */
+        display: flex;
     }
 #nav {
   padding: 30px;

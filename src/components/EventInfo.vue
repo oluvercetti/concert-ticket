@@ -183,7 +183,7 @@ export default {
       defaultImage: defaultImage,
       venueTitle: 'Venue',
       dateTitle: 'Date and Time',
-      buyTicket: 'Buy Ticket',
+      buyTicket: 'Buy Tickets',
       socialTitle: 'Social Links',
       showModalVal: false,
       mapText: 'View map for directions',
@@ -209,11 +209,9 @@ export default {
             ])
         .then(response => {
         this.eventdetail = response[0].data.data
-        this.ticketDetails = response[1].data.data
-        this.ticketDetails.forEach((ticketDetail) => {
-            this.$set(ticketDetail, 'ticketCount', this.ticketCount)  
-        });
-        console.log(this.ticketDetails);
+        this.ticketDetailsResponse = response[1].data.data
+        let ticketCount = this.ticketCount
+        this.ticketDetails = this.ticketDetailsResponse.map(ticketDetail => ({...ticketDetail, ticketCount}))
         this.isLoading = false;
         this.apiCallComplete = true;
       })
@@ -306,11 +304,11 @@ export default {
          display: block;
          text-align: center;
          margin-bottom: 20px;
+         
             @media screen and (min-width: 800px) {
             display: flex;
             flex-direction: row;
             text-align: left;
-            margin-bottom: 0;
             }
         }
             &__top__left{
@@ -318,6 +316,9 @@ export default {
             @media screen and (min-width: 800px) {
             width: 50%;
             min-height: 340px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
             }
             }
                 &__top__left__date{
@@ -352,25 +353,26 @@ export default {
                     background-color: #F5A623;
                     margin-bottom: 10px;
                     @media screen and (min-width: 800px) {
-                    min-width: 70%;
+                    max-width: 70%;
                     font-size: 14px;
+                    margin: 0;
                     
                     }
                 }
             &__top__right{
             
                 margin: auto;
-                width: 40%;
+                width: 50%;
                 text-align: center;
                 border-radius: 6px;
             @media screen and (min-width: 800px) {
-            width: 50%;
+            margin: auto 0;
+            display: flex;
+            justify-content: flex-end;
             }
             }
             &__top__right__image{
             min-width: 100%;
-            min-height: 100%;
-            border: none;
             box-shadow: 0 0.5rem 0.4rem -0.4rem rgba(0, 0, 0, 0.4);
             border-radius: 6px;
             }
@@ -384,7 +386,7 @@ export default {
         margin: auto;
         width: 40%;
             @media screen and (min-width: 800px) {
-            margin: 5px 0 30px 0;
+            margin: 40px 0;
             width: 100%;
             }
         }
