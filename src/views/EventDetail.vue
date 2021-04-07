@@ -7,9 +7,9 @@
     
 </template>
 <script>
-import Header from '@/components/Header.vue'
-import Footer from '@/components/Footer.vue'
-import EventInfo from '@/components/EventInfo.vue'
+import Header from '@/components/concert-header.vue'
+import Footer from '@/components/concert-footer.vue'
+import EventInfo from '@/components/event-info.vue'
 export default {
     name: 'EventDetail',
     components: {

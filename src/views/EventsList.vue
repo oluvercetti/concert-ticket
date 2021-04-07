@@ -12,9 +12,9 @@
     </div>
 </template>
 <script>
-import Header from '@/components/Header.vue'
-import Footer from '@/components/Footer.vue'
-import Events from '@/components/Events.vue'
+import Header from '@/components/concert-header.vue'
+import Footer from '@/components/concert-footer.vue'
+import Events from '@/components/concert-events.vue'
 
 export default {
   name: 'EventsList',
